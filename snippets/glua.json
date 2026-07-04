@@ -1,0 +1,37 @@
+{
+  "hook.Add": {
+    "prefix": "hook",
+    "body": ["hook.Add(\"${1:Think}\", \"${2:UniqueID}\", function(${3})\n\t$0\nend)"],
+    "description": "Register a GMod hook"
+  },
+  "net message (send)": {
+    "prefix": "netstart",
+    "body": ["net.Start(\"${1:MessageName}\")\n\t$0\nnet.SendToServer()"],
+    "description": "Start and send a net message"
+  },
+  "net.Receive": {
+    "prefix": "netreceive",
+    "body": ["net.Receive(\"${1:MessageName}\", function(len${2:, ply})\n\t$0\nend)"],
+    "description": "Receive a net message"
+  },
+  "concommand.Add": {
+    "prefix": "concommand",
+    "body": ["concommand.Add(\"${1:name}\", function(ply, cmd, args)\n\t$0\nend)"],
+    "description": "Add a console command"
+  },
+  "timer.Create": {
+    "prefix": "timer",
+    "body": ["timer.Create(\"${1:name}\", ${2:1}, ${3:0}, function()\n\t$0\nend)"],
+    "description": "Create a repeating timer"
+  },
+  "HUDPaint hook": {
+    "prefix": "hudpaint",
+    "body": ["hook.Add(\"HUDPaint\", \"${1:UniqueID}\", function()\n\t$0\nend)"],
+    "description": "HUDPaint hook"
+  },
+  "for players": {
+    "prefix": "forplayers",
+    "body": ["for _, ply in ipairs(player.GetAll()) do\n\t$0\nend"],
+    "description": "Iterate over all players"
+  }
+}

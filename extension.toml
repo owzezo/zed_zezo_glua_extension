@@ -1,0 +1,15 @@
+id = "glua"
+name = "GLua (Garry's Mod)"
+version = "0.1.0"
+schema_version = 1
+authors = ["owzezo"]
+description = "Garry's Mod Lua: syntax highlighting + lua-language-server with the GMod API definitions."
+repository = "https://github.com/owzezo/zed_zezo_glua_extension"
+
+[grammars.glua]
+repository = "https://github.com/tree-sitter-grammars/tree-sitter-lua"
+rev = "10fe0054734eec83049514ea2e718b2a56acd0c9"
+
+[language_servers.glua-luals]
+name = "Lua Language Server (GLua)"
+languages = ["GLua"]
